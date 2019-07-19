@@ -2,7 +2,16 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
-
+    let memo = {}
+    let pointer = linkedlist.head
+    while (!pointer.next===null){
+        console.log(pointer.value)
+        if(memo[pointer.value===true]){
+            return true
+        }
+        memo[pointer.value] = true
+        pointer = pointer.next
+    }
 };
 
 
